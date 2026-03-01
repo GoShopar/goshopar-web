@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/OrdersManagement.css';
+import Header from '../components/Header';
 
 const OrdersManagement = () => {
   const [activeTab, setActiveTab] = useState('pending');
@@ -25,6 +26,7 @@ const OrdersManagement = () => {
 
   return (
     <div className="orders-management-page">
+      <Header />
       <div className="orders-navigation">
         <button className="nav-arrow-btn">←</button>
         <button className="nav-arrow-btn">→</button>

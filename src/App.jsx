@@ -1,6 +1,6 @@
 
 import React, {useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 import Splash from './pages/Splash';
@@ -29,14 +29,13 @@ import CustomersRetention from './pages/CustomersRetention'
 import MarketingMultiChannel from './pages/MarketingMultiChannel'
 import Profile from './pages/Profile'
 import AddNewProduct from './pages/AddNewProduct'
-import Header from './components/Header'
+import ProductPage from './pages/ProductPage';
+
 
 function App() {
   return (
     <>
-    <Header />
-   
-    <Router>
+    
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="/login" element={<Login />} />
@@ -56,8 +55,8 @@ function App() {
 
 
 
-        <Route path="/add-product" element={<AddNewProduct />} />
-        <Route path="/product-management" element={<ProductManagement />} />
+        <Route path="/product/add-product" element={<AddNewProduct />} />
+        <Route path="/product/product-management" element={<ProductManagement />} />
         <Route path="/delivery-logistics" element={<DeliveryLogistics />} />
         <Route path="/setup-local-rider" element={<SetupLocalRider />} />
         <Route path="/manage-gig-logistics" element={<ManageGIGLogistics />} />
@@ -66,9 +65,9 @@ function App() {
         <Route path="/customers-retention" element={<CustomersRetention />} />
         <Route path="/marketing-multi-channel" element={<MarketingMultiChannel />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/product" element={<ProductPage />} />
         
       </Routes>
-    </Router>
      </>
   );
 }

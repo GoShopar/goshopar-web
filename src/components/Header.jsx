@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import '../css/Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState('Dashboard');
 
   const navItems = [
-    'Dashboard',
-    'Orders',
-    'Products',
-    'Customers',
-    'Marketing',
-    'Analytics'
-  ];
+  { name: 'Dashboard', path: '/dashboard' },
+  { name: 'Orders', path: '/orders-management' },
+  { name: 'Products', path: '/product' },
+  { name: 'Customers', path: '/customers-retention' },
+  { name: 'Marketing', path: '/marketing-multi-channel' },
+  { name: 'Analytics', path: '/analytics' }
+];
 
   return (
     <header className="main-header">
@@ -32,7 +33,9 @@ const Header = () => {
               className={`nav-item ${activeTab === item ? 'active' : ''}`}
               onClick={() => setActiveTab(item)}
             >
-              {item}
+               <Link key={item.name} to={item.path}>
+          {item.name}
+        </Link>
             </button>
           ))}
         </nav>
@@ -45,9 +48,11 @@ const Header = () => {
               <path d="M11.4417 17.5C11.2952 17.7526 11.0849 17.9622 10.8319 18.1079C10.5789 18.2537 10.292 18.3304 10 18.3304C9.70802 18.3304 9.42113 18.2537 9.16811 18.1079C8.91509 17.9622 8.70484 17.7526 8.55835 17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <div className="profile-avatar">
-            <img src="https://via.placeholder.com/40" alt="Profile" />
-          </div>
+          <Link to="/profile" className="profile-link">
+            <div className="profile-avatar">
+              <img src="https://via.placeholder.com/40" alt="Profile" />
+            </div>
+          </Link>
         </div>
       </div>
     </header>

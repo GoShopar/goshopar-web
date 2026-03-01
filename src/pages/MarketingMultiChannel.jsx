@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/MarketingMultiChannel.css';
+import Header from '../components/Header';
 
 const MarketingMultiChannel = () => {
   const socialPlatforms = [
@@ -39,6 +40,7 @@ const MarketingMultiChannel = () => {
 
   return (
     <div className="marketing-multi-channel">
+      <Header />
       <div className="marketing-header">
         <h1>Marketing & Multi-Channel</h1>
         <p className="marketing-subtitle">

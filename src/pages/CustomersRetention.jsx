@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/CustomersRetention.css';
+import Header from '../components/Header';
 
 const CustomersRetention = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,6 +28,7 @@ const CustomersRetention = () => {
 
   return (
     <div className="customers-retention">
+      <Header />
       <h1 className="page-title">Customers & Retention</h1>
 
       {/* Metrics Cards */}
