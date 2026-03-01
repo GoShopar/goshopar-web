@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+.order-information-page {
+  background-color: #FAFAFA;
+  min-height: 100vh;
+  padding: 32px 48px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Navigation */
+.order-navigation {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.order-nav-arrow {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1F2937;
+  transition: color 0.2s;
+}
+
+.order-nav-arrow:hover {
+  color: #F97316;
+}
+
+/* Title */
+.order-info-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0 0 32px 0;
+}
+
+/* Section */
+.info-section {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0 0 20px 0;
+}
+
+/* Order Details Grid */
+.order-details-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+/* Buyer Information Grid */
+.buyer-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.buyer-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buyer-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.buyer-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+
+/* Payment Status Grid */
+.payment-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.payment-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.payment-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+/* Delivery Tracking */
+.delivery-tracking {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tracking-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.tracking-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.icon-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #E5E7EB;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: transparent;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.icon-circle.completed {
+  border-color: #10B981;
+  background-color: #10B981;
+  color: #FFFFFF;
+}
+
+.tracking-line {
+  width: 2px;
+  height: 40px;
+  background-color: #E5E7EB;
+  margin-top: -4px;
+}
+
+.tracking-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 24px;
+}
+
+.tracking-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.tracking-date {
+  font-size: 13px;
+  color: #10B981;
+}
+
+/* Escrow Status */
+.escrow-status {
+  display: flex;
+  gap: 32px;
+}
+
+.escrow-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  min-width: 60px;
+}
+
+.escrow-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+/* Payment on Delivery */
+.payment-delivery {
+  display: flex;
+  gap: 32px;
+}
+
+.payment-delivery-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  min-width: 60px;
+}
+
+.payment-delivery-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .order-information-page {
+    padding: 24px;
+  }
+
+  .order-details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .buyer-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .order-details-grid,
+  .buyer-info-grid,
+  .payment-status-grid {
+    grid-template-columns: 1fr;
+  }
+}
