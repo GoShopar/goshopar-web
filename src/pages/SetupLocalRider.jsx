@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../css/SetupLocalRider.css";
+import AddRiderModal from "../components/AddRiderModal";
 
 const SetupLocalRider = () => {
   const [activeTab, setActiveTab] = useState("riders");
+   const [isModalOpen, setIsModalOpen] = useState(false);
+  
 
   const riders = [
     {
@@ -31,6 +34,10 @@ const SetupLocalRider = () => {
   return (
     <div className="setup-local-rider-page">
       {/* Header */}
+       <AddRiderModal 
+  isOpen={isModalOpen} 
+  onClose={() => setIsModalOpen(false)} 
+/>
       <div className="setup-header">
         <div className="setup-header-text">
           <h1 className="setup-title">Setup Customer Local Rider</h1>

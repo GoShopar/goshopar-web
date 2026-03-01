@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   font-family: 'DM Sans', sans-serif;
   line-height: 1.5;
@@ -22,17 +24,30 @@ a:hover {
   color: #4A5F63;
 }
 
-body {
+/* body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #FAFAFA;
+  --primary-color: #61797D;
+  --bg-color: #FAFAFA;
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body {
+  background-color: var(--bg-color);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+/*h1, h2, h3, h4, h5, h6 {
+ font-family: 'Noto Sans Display', sans-serif;
+}*/
 
 button {
   border-radius: 8px;
