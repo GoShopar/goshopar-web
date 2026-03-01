@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Profile.css';
+import { Pencil } from 'lucide-react';
 
 const Profile = () => {
   const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
@@ -62,7 +63,7 @@ const Profile = () => {
         <div className="section-header">
           <h3>Personal Information</h3>
           <button className="edit-btn" onClick={handleEditPersonalInfo}>
-            <span className="edit-icon">✏️</span> Edit
+            <span className="edit-icon"><Pencil size={14}/></span> Edit
           </button>
         </div>
         <div className="info-grid">
@@ -90,7 +91,7 @@ const Profile = () => {
         <div className="section-header">
           <h3>Payment Reception Account</h3>
           <button className="edit-btn" onClick={handleEditPayment}>
-            <span className="edit-icon">✏️</span> Edit
+            <span className="edit-icon"><Pencil size={14}/></span> Edit
           </button>
         </div>
         <div className="info-grid">

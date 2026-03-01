@@ -1,6 +1,10 @@
 import React from 'react';
 import '../css/MarketingMultiChannel.css';
 import Header from '../components/Header';
+import { BsInstagram, BsTiktok, BsWhatsapp } from 'react-icons/bs';
+import { FaFacebook } from 'react-icons/fa';
+import { Plus } from 'lucide-react';
+
 
 const MarketingMultiChannel = () => {
   const socialPlatforms = [
@@ -8,7 +12,7 @@ const MarketingMultiChannel = () => {
       id: 1,
       name: 'Instagram',
       description: 'Sell directly on Instagram',
-      icon: '📷',
+      icon: <BsInstagram size={12}/>,
       color: '#E4405F',
       connected: false
     },
@@ -16,7 +20,7 @@ const MarketingMultiChannel = () => {
       id: 2,
       name: 'WhatsApp Business',
       description: 'Sell directly on Whatsapp',
-      icon: '💬',
+      icon: <BsWhatsapp size={12}/>,
       color: '#25D366',
       connected: false
     },
@@ -24,7 +28,7 @@ const MarketingMultiChannel = () => {
       id: 3,
       name: 'TikTok',
       description: 'Sell directly on TikTok',
-      icon: '🎵',
+      icon: <BsTiktok size={12}/>,
       color: '#000000',
       connected: false
     },
@@ -32,7 +36,7 @@ const MarketingMultiChannel = () => {
       id: 4,
       name: 'Facebook',
       description: 'Sell directly on Facebook',
-      icon: 'f',
+      icon: <FaFacebook size={12}/>,
       color: '#1877F2',
       connected: false
     }
@@ -59,7 +63,7 @@ const MarketingMultiChannel = () => {
             </div>
             <div className="card-action">
               <button className="create-campaign-btn">
-                <span className="btn-icon">➕</span>
+                <span className="btn-icon"><Plus size={18}/></span>
                 Create Campaign
               </button>
             </div>

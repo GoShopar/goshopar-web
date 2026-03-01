@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/CustomersRetention.css';
 import Header from '../components/Header';
+import { Phone, PhoneCallIcon } from 'lucide-react';
 
 const CustomersRetention = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -193,7 +194,7 @@ const CustomersRetention = () => {
               <span className="icon">✉</span> Send Email
             </button>
             <button className="call-customer-btn">
-              <span className="icon">📞</span> Call Customers
+              <span className="icon"><Phone size={16}/></span> Call Customers
             </button>
           </div>
         </div>

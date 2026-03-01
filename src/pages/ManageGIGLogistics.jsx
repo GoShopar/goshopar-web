@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/ManageGIGLogistics.css';
+import { Pencil, Trash2, KeyRound, PlusCircle, RefreshCcw } from 'lucide-react';
 
 const ManageGIGLogistics = () => {
   const [standardDelivery, setStandardDelivery] = useState(false);
@@ -99,7 +100,7 @@ const ManageGIGLogistics = () => {
               <p className="section-description">Override default partner pricing for specific delivery zone or product categories</p>
             </div>
             <button className="add-override-btn" onClick={handleAddOverride}>
-              <span className="plus-icon">⊕</span> Add New Override
+              <span className="plus-icon"><PlusCircle size={14}/></span> Add New Override
             </button>
           </div>
 
@@ -124,8 +125,8 @@ const ManageGIGLogistics = () => {
                   </td>
                   <td>
                     <div className="action-buttons">
-                      <button className="edit-btn">✎</button>
-                      <button className="delete-btn">🗑</button>
+                      <button className="edit-btn"><Pencil size={14}/></button>
+                      <button className="delete-btn"><Trash2 size={14}/></button>
                     </div>
                   </td>
                 </tr>
@@ -150,7 +151,7 @@ const ManageGIGLogistics = () => {
 
             <div className="connection-row">
               <div className="connection-label">
-                <div className="icon-circle green">🔑</div>
+                <div className="icon-circle green"><KeyRound size={14}/></div>
                 <span>API Key</span>
               </div>
               <span className="connection-value">PK LIVE......................</span>
@@ -158,7 +159,7 @@ const ManageGIGLogistics = () => {
 
             <div className="connection-row">
               <div className="connection-label">
-                <div className="icon-circle green">🔄</div>
+                <div className="icon-circle green"><RefreshCcw size={14}/></div>
                 <span>Last Synced</span>
               </div>
               <span className="connection-value">2 minutes ago</span>
