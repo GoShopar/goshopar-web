@@ -1,0 +1,667 @@
+.landing-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* ── Hero ──────────────────────────────────────────── */
+.landing-hero {
+  padding: 60px 0 80px;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Left column ──────────────────────────────────── */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-title {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-title-teal {
+  color: #4a7075;
+}
+
+.hero-title-dark {
+  color: #1a1a1a;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #555555;
+  max-width: 420px;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-waitlist {
+  background-color: #3d5e62;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-waitlist:hover {
+  background-color: #2e4a4f;
+  color: #ffffff;
+}
+
+.btn-how-it-works {
+  background-color: transparent;
+  color: #3d5e62;
+  border: 1.5px solid #b0c9cc;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-how-it-works:hover {
+  border-color: #4a7075;
+  color: #2e4a4f;
+}
+
+/* ── Right column ─────────────────────────────────── */
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+}
+
+.hero-image-bg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dff0f2 0%, #c8e4ea 40%, #a8d5de 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ── Floating badges ──────────────────────────────── */
+.hero-badge {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 170px;
+}
+
+.badge-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.badge-icon-wrap {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon-chart {
+  background-color: #f0fdf4;
+}
+
+.badge-icon-ai {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.badge-ai-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.badge-icon-check {
+  background: transparent;
+}
+
+/* Badge positions — inset so they sit ON the image */
+.badge-top-left {
+  top: 16px;
+  left: 16px;
+}
+
+.badge-bottom-left {
+  bottom: 24px;
+  left: 16px;
+}
+
+.badge-bottom-right {
+  bottom: 16px;
+  right: 16px;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-image-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-hero {
+    padding: 40px 0 60px;
+  }
+
+  .hero-container {
+    padding: 0 20px;
+    gap: 32px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  /* Hide secondary CTA on mobile */
+  .btn-how-it-works {
+    display: none;
+  }
+
+  /* Fixed equal width on all badges so right-aligned ones share the same left edge */
+  .hero-badge {
+    min-width: unset;
+    width: 150px;
+    padding: 8px 10px;
+    gap: 7px;
+  }
+
+  .badge-text {
+    font-size: 11px;
+  }
+
+  .badge-icon-wrap {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* "Free, fast, flexible" → top-right */
+  .badge-bottom-right {
+    bottom: auto;
+    top: 14px;
+    right: 14px;
+  }
+
+  /* "Converts 17%" → 1px below the first badge
+     14px top + 8px×2 padding + 26px icon + 1px gap = 57px */
+  .badge-top-left {
+    top: 57px;
+    left: auto;
+    right: 14px;
+  }
+
+  /* "Get more done with AI" → bottom-left */
+  .badge-bottom-left {
+    bottom: 18px;
+    left: 14px;
+  }
+}
+
+/* ── Features Section ─────────────────────────────── */
+.features-section {
+  padding: 72px 0 80px;
+  background-color: #f8f9fa;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #e8ecee;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #d1dfe1;
+  overflow: hidden;
+}
+
+.feature-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-card-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-card-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.feature-card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+/* ── CTA Banner ───────────────────────────────────── */
+.cta-section {
+  padding: 64px 40px;
+  background-color: #ffffff;
+}
+
+.cta-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 340px;
+}
+
+.cta-image-panel {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  overflow: hidden;
+  background: #c5d8db;
+}
+
+.cta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cta-content-panel {
+  background-color: #4a7075;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 52px 48px;
+}
+
+.cta-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+
+.cta-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cta-btn {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #d4921e;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #b87a16;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 0;
+  }
+
+  /* Image becomes full background; content overlays on top */
+  .cta-card {
+    display: block;
+    position: relative;
+    border-radius: 0;
+    min-height: 420px;
+  }
+
+  .cta-image-panel {
+    position: absolute;
+    inset: 0;
+    min-height: unset;
+    height: 100%;
+  }
+
+  .cta-content-panel {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(42, 68, 72, 0.82);
+    min-height: 420px;
+    padding: 48px 28px;
+    justify-content: flex-end;
+  }
+
+  .cta-heading {
+    font-size: 26px;
+  }
+}
+
+/* ── FAQ Section ──────────────────────────────────── */
+.faq-section {
+  padding: 72px 40px 80px;
+  background-color: #ffffff;
+}
+
+.faq-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.faq-list {
+  border-top: 1px solid #e5e7eb;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 4px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.faq-question:hover {
+  color: #4a7075;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: #6b7280;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 4px 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555555;
+  max-width: 760px;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 48px 20px 56px;
+  }
+
+  .faq-title {
+    font-size: 36px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 22px 4px;
+  }
+}
+
+/* ── About Section ────────────────────────────────── */
+.about-divider {
+  display: none;
+}
+
+.about-section {
+  background-color: #faf5ee;
+  padding: 80px 40px;
+}
+
+.about-container {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-heading {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.about-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555555;
+}
+
+/* ── App Download Section ─────────────────────────── */
+.app-section {
+  padding: 72px 40px 80px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+}
+
+.app-body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555555;
+  max-width: 680px;
+}
+
+.app-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  min-width: 175px;
+  transition: background-color 0.2s;
+}
+
+.store-badge:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-badge-sub {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.store-badge-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .app-section {
+    padding: 48px 20px 56px;
+  }
+
+  .app-heading {
+    font-size: 26px;
+  }
+
+  .store-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── Features + About responsive ─────────────────── */
+@media (max-width: 900px) {
+  .features-container {
+    grid-template-columns: 1fr;
+    /* full width — no max-width constraint on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .features-section {
+    padding: 48px 0 56px;
+  }
+
+  .features-container {
+    padding: 0 20px;
+  }
+
+  .about-section {
+    padding: 56px 24px;
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .about-body {
+    font-size: 14px;
+  }
+}

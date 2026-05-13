@@ -1,0 +1,190 @@
+.lf-footer {
+  background-color: #4a7075;
+  color: #ffffff;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* ── Main grid ───────────────────────────────────── */
+.lf-main {
+  padding: 52px 40px 44px;
+}
+
+.lf-container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Brand column ────────────────────────────────── */
+.lf-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.lf-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.lf-logo-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lf-logo-tag {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+/* ── Nav / Contact columns ───────────────────────── */
+.lf-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 4px;
+}
+
+.lf-col a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.lf-col a:hover {
+  color: #ffffff;
+}
+
+/* ── Social column ───────────────────────────────── */
+.lf-social-col {
+  gap: 16px;
+}
+
+.lf-social-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.lf-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.lf-socials a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.lf-socials a:hover {
+  color: #ffffff;
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.lf-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 40px;
+}
+
+/* ── Bottom bar ──────────────────────────────────── */
+.lf-bottom {
+  padding: 20px 40px;
+}
+
+.lf-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lf-bottom-inner > span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.lf-legal {
+  display: flex;
+  gap: 28px;
+}
+
+.lf-legal a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.lf-legal a:hover {
+  color: #ffffff;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .lf-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .lf-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .lf-main {
+    padding: 40px 24px 32px;
+  }
+
+  /* Logo: full width, centered */
+  .lf-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .lf-brand {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Social: full width, centered */
+  .lf-social-col {
+    grid-column: 1 / -1;
+    align-items: center;
+  }
+
+  .lf-divider {
+    margin: 0 24px;
+  }
+
+  .lf-bottom {
+    padding: 20px 24px;
+  }
+
+  /* Legal links on top, copyright below — both centered */
+  .lf-bottom-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lf-legal {
+    gap: 20px;
+  }
+}

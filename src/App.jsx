@@ -30,6 +30,7 @@ import MarketingMultiChannel from './pages/MarketingMultiChannel'
 import Profile from './pages/Profile'
 import AddNewProduct from './pages/AddNewProduct'
 import ProductPage from './pages/ProductPage';
+import LandingPage from './pages/LandingPage';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
     
       <Routes>
         <Route path="/" element={<Splash />} />
+        <Route path="/landing" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
