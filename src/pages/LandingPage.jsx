@@ -209,6 +209,7 @@ const LandingPage = () => {
         </div>
       </section>
 
+
       {/* ── App Download Section ───────────────────────── */}
       <section className="app-section">
         <div className="app-container">
