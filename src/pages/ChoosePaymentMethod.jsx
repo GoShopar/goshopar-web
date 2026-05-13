@@ -8,7 +8,6 @@ const ChoosePaymentMethod = () => {
   const [autoRenew, setAutoRenew] = useState(true);
 
   const methods = ['Paystack', 'Flutterwave', 'Card', 'Bank'];
-
   return (
     <div style={styles.container}>
       <div style={styles.header}>
